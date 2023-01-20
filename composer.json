@@ -1,0 +1,62 @@
+{
+    "name": "ibrahimhalilucan/keygen",
+    "description": "Generator is Char, Float, Integer, Serial and Token types of data for use in Laravel projects. It simplifies data generation processes and is an important tool for use in your projects.",
+    "type": "library",
+    "license": "MIT",
+    "keywords": [
+        "laravel",
+        "php",
+        "datageneration",
+        "package",
+        "library",
+        "unique",
+        "identifier",
+        "packagist",
+        "generator",
+        "key",
+        "keygen"
+    ],
+    "autoload": {
+        "psr-4": {
+            "Ibrahimhalilucan\\Keygen\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "ibrahimhalilucan",
+            "email": "ibrahimhalilucan@gmail.com",
+            "homepage": "https://github.com/ibrahimhalilucan",
+            "role": "Developer"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=8.0"
+    },
+    "require-dev": {
+        "ext-json": "*",
+        "orchestra/testbench": "^7.19",
+        "phpunit/phpunit": "^9.5"
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "IbrahimHalilUcan\\Keygen\\PackageServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "prefer-stable": true
+}
