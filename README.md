@@ -1,9 +1,6 @@
-## Generate
+## Keygen
 
-Keygen is a PHP package that generates random character sequences known as keys.
-The package ships with built-in key generators for five key types namely:
-alphabet, float, numeric, serial and token.
-Its implementation effectively combines simplicity and expressiveness.
+Keygen is a package that generates Char, Float, Integer, Serial and Token types of data for use in Laravel projects.
 ## Requirement
 
 > Laravel >= 9.0
