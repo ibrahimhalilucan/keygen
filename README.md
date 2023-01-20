@@ -81,7 +81,7 @@ Keygen::serial()->prefix('ihu-')->suffix('-pi')->generate(); // e.g ihu-yvyqar-b
 
 ### Token
 ```php
-// token() creates a true or false key generator
+// Generates a random token using base64 encoding and str_shuffle.
 // e.g f/Oio2HmQID6Pd1SW6kQkDtzCFbgLaG0z+0/Z3R0iiG/bHeJlyFq330/npFq2A6S
 
 Keygen::token()->generate(); // e.g H8dtuud/5OZatJgv9JEclexIO87EjzFi2mfiKNO7opit/LQdhvpuTPGG5lUnIbaZ
