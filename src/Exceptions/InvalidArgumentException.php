@@ -1,6 +1,6 @@
 <?php
 
-namespace Ibrahimhalilucan\Keygen\Exceptions;
+namespace IbrahimHalilUcan\Keygen\Exceptions;
 
 class InvalidArgumentException extends \Exception
 {

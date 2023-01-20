@@ -1,9 +1,9 @@
 <?php
 
-namespace Ibrahimhalilucan\Keygen\Factory;
+namespace IbrahimHalilUcan\Keygen\Factory;
 
-use Ibrahimhalilucan\Keygen\Exceptions\InvalidArgumentException;
-use Ibrahimhalilucan\Keygen\Keygen;
+use IbrahimHalilUcan\Keygen\Exceptions\InvalidArgumentException;
+use IbrahimHalilUcan\Keygen\Keygen;
 
 class GeneratorFactory
 {

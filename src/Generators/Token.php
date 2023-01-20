@@ -1,10 +1,10 @@
 <?php
 
-namespace Ibrahimhalilucan\Keygen\Generators;
+namespace IbrahimHalilUcan\Keygen\Generators;
 
 use Exception;
-use Ibrahimhalilucan\Keygen\Keygen;
-use Ibrahimhalilucan\Keygen\Interfaces\GenerateInterface;
+use IbrahimHalilUcan\Keygen\Keygen;
+use IbrahimHalilUcan\Keygen\Interfaces\GenerateInterface;
 
 class Token extends Keygen implements GenerateInterface
 {

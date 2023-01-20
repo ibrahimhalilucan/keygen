@@ -1,13 +1,13 @@
 <?php
 
-namespace Ibrahimhalilucan\Keygen\Generators;
+namespace IbrahimHalilUcan\Keygen\Generators;
 
 use Exception;
-use Ibrahimhalilucan\Keygen\Exceptions\InvalidArgumentException;
-use Ibrahimhalilucan\Keygen\Keygen;
-use Ibrahimhalilucan\Keygen\Interfaces\GenerateInterface;
+use IbrahimHalilUcan\Keygen\Exceptions\InvalidArgumentException;
+use IbrahimHalilUcan\Keygen\Keygen;
+use IbrahimHalilUcan\Keygen\Interfaces\GenerateInterface;
 
-class Integer extends Keygen implements GenerateInterface
+class Numeric extends Keygen implements GenerateInterface
 {
     /**
      * Minimum value for the random int

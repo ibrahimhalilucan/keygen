@@ -1,6 +1,6 @@
 <?php
 
-namespace Ibrahimhalilucan\Keygen;
+namespace IbrahimHalilUcan\Keygen;
 
 abstract class AbstractGenerator
 {

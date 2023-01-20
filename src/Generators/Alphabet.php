@@ -1,12 +1,12 @@
 <?php
 
-namespace Ibrahimhalilucan\Keygen\Generators;
+namespace IbrahimHalilUcan\Keygen\Generators;
 
 use Exception;
-use Ibrahimhalilucan\Keygen\Keygen;
-use Ibrahimhalilucan\Keygen\Interfaces\GenerateInterface;
+use IbrahimHalilUcan\Keygen\Keygen;
+use IbrahimHalilUcan\Keygen\Interfaces\GenerateInterface;
 
-class Char extends Keygen implements GenerateInterface
+class Alphabet extends Keygen implements GenerateInterface
 {
     /**
      * A string prefix to be added to the generated random string

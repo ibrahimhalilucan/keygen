@@ -1,24 +1,24 @@
 <?php
-use Ibrahimhalilucan\Keygen\Keygen;
+use IbrahimHalilUcan\Keygen\Keygen;
 use Orchestra\Testbench\TestCase;
 
 /**
  * Class IntegerTest.
  */
-class IntegerTest extends TestCase
+class NumericTest extends TestCase
 {
     // When testing inside of a Laravel installation, this is not needed
     protected function getPackageProviders($app): array
     {
         return [
-            'Ibrahimhalilucan\Keygen\PackageServiceProvider'
+            'IbrahimHalilUcan\Keygen\PackageServiceProvider'
         ];
     }
 
     /** @test */
     public function test_generate_integer()
     {
-        $number = Keygen::integer()->generate();
+        $number = Keygen::numeric()->generate();
         $this->assertIsInt($number);
         $this->assertGreaterThanOrEqual(config('keygen-config.integer_min'), $number);
         $this->assertLessThanOrEqual(config('keygen-config.integer_max'), $number);
@@ -27,7 +27,7 @@ class IntegerTest extends TestCase
     /** @test */
     public function test_generate_integer_min_max()
     {
-        $number = Keygen::integer()->min(4)->max(45)->generate();
+        $number = Keygen::numeric()->min(4)->max(45)->generate();
 
         $this->assertIsInt($number);
         $this->assertGreaterThanOrEqual(4, $number);
@@ -39,7 +39,7 @@ class IntegerTest extends TestCase
     {
         $catch = false;
         try {
-            $number = Keygen::integer()->min("string")->generate();
+            $number = Keygen::numeric()->min("string")->generate();
         } catch (\Error $exception) {
             $catch = true;
             $this->assertIsString($exception->getMessage(), "Message Error");
@@ -52,7 +52,7 @@ class IntegerTest extends TestCase
     {
         $catch = false;
         try {
-            $number = Keygen::integer()->max("string")->generate();
+            $number = Keygen::numeric()->max("string")->generate();
         } catch (\Error $exception) {
             $catch = true;
             $this->assertIsString($exception->getMessage(), "Message Error");
@@ -65,7 +65,7 @@ class IntegerTest extends TestCase
     {
         $catch = false;
         try {
-            $number = Keygen::integer()->range("string", 35)->generate();
+            $number = Keygen::numeric()->range("string", 35)->generate();
         } catch (\Error $exception) {
             $catch = true;
             $this->assertIsString($exception->getMessage(), "Message Error");

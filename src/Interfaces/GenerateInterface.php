@@ -1,6 +1,6 @@
 <?php
 
-namespace Ibrahimhalilucan\Keygen\Interfaces;
+namespace IbrahimHalilUcan\Keygen\Interfaces;
 
 interface GenerateInterface
 {

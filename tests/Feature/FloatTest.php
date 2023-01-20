@@ -1,5 +1,5 @@
 <?php
-use Ibrahimhalilucan\Keygen\Keygen;
+use IbrahimHalilUcan\Keygen\Keygen;
 use Orchestra\Testbench\TestCase;
 
 /**
@@ -11,7 +11,7 @@ class FloatTest extends TestCase
     protected function getPackageProviders($app): array
     {
         return [
-            'Ibrahimhalilucan\Keygen\PackageServiceProvider'
+            'IbrahimHalilUcan\Keygen\PackageServiceProvider'
         ];
     }
 

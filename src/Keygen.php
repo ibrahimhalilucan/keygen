@@ -1,14 +1,14 @@
 <?php
 
-namespace Ibrahimhalilucan\Keygen;
+namespace IbrahimHalilUcan\Keygen;
 
-use Ibrahimhalilucan\Keygen\Exceptions\InvalidArgumentException;
-use Ibrahimhalilucan\Keygen\Factory\GeneratorFactory;
-use Ibrahimhalilucan\Keygen\Generators\Char;
-use Ibrahimhalilucan\Keygen\Generators\FloatType;
-use Ibrahimhalilucan\Keygen\Generators\Integer as IntegerType;
-use Ibrahimhalilucan\Keygen\Generators\Serial;
-use Ibrahimhalilucan\Keygen\Generators\Token;
+use IbrahimHalilUcan\Keygen\Exceptions\InvalidArgumentException;
+use IbrahimHalilUcan\Keygen\Factory\GeneratorFactory;
+use IbrahimHalilUcan\Keygen\Generators\Alphabet;
+use IbrahimHalilUcan\Keygen\Generators\FloatType;
+use IbrahimHalilUcan\Keygen\Generators\Numeric;
+use IbrahimHalilUcan\Keygen\Generators\SerialNumber;
+use IbrahimHalilUcan\Keygen\Generators\Token;
 
 class Keygen extends AbstractGenerator
 {
@@ -34,11 +34,11 @@ class Keygen extends AbstractGenerator
     protected function generatorFromAlias($alias)
     {
         $generatorAliases = [
-            'char'    => Char::class,
-            'integer' => IntegerType::class,
+            'alphabet' => Alphabet::class,
+            'numeric'  => Numeric::class,
             'float'    => FloatType::class,
-            'serial'  => Serial::class,
-            'token'   => Token::class,
+            'serial'   => SerialNumber::class,
+            'token'    => Token::class,
         ];
 
         if (array_key_exists($alias, $generatorAliases)) {

@@ -1,17 +1,17 @@
 <?php
-use Ibrahimhalilucan\Keygen\Keygen;
+use IbrahimHalilUcan\Keygen\Keygen;
 use Orchestra\Testbench\TestCase;
 
 /**
  * Class SerialTest.
  */
-class SerialTest extends TestCase
+class SerialNumberTest extends TestCase
 {
     // When testing inside of a Laravel installation, this is not needed
     protected function getPackageProviders($app): array
     {
         return [
-            'Ibrahimhalilucan\Keygen\PackageServiceProvider'
+            'IbrahimHalilUcan\Keygen\PackageServiceProvider'
         ];
     }
 

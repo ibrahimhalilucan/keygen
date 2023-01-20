@@ -1,24 +1,24 @@
 <?php
-use Ibrahimhalilucan\Keygen\Keygen;
+use IbrahimHalilUcan\Keygen\Keygen;
 use Orchestra\Testbench\TestCase;
 
 /**
  * Class CharTest.
  */
-class CharTest extends TestCase
+class AlphabetTest extends TestCase
 {
     // When testing inside of a Laravel installation, this is not needed
     protected function getPackageProviders($app): array
     {
         return [
-            'Ibrahimhalilucan\Keygen\PackageServiceProvider'
+            'IbrahimHalilUcan\Keygen\PackageServiceProvider'
         ];
     }
 
     /** @test */
     public function test_generate_char()
     {
-        $char = Keygen::char()->generate();
+        $char = Keygen::alphabet()->generate();
         $this->assertIsString($char, "Is String");
     }
 
@@ -28,7 +28,7 @@ class CharTest extends TestCase
     public function test_generate_char_length()
     {
         $length = random_int(1,32);
-        $char = Keygen::char()->length($length)->generate();
+        $char = Keygen::alphabet()->length($length)->generate();
         $this->assertIsString($char, "Is String");
         $this->assertSame($length, strlen($char), "Check length String generated <" . $char . ">");
     }
@@ -36,7 +36,7 @@ class CharTest extends TestCase
     /** @test */
     public function test_generate_char_alpha()
     {
-        $char = Keygen::char()->alpha()->generate();
+        $char = Keygen::alphabet()->alpha()->generate();
         $this->assertIsString($char, "Is String");
         $this->assertTrue(ctype_alpha($char), "Check for alphabetic character");
     }
@@ -44,7 +44,7 @@ class CharTest extends TestCase
     /** @test */
     public function test_generate_char_alphaLowerCase()
     {
-        $char = Keygen::char()->alphaLowerCase()->generate();
+        $char = Keygen::alphabet()->alphaLowerCase()->generate();
         $this->assertIsString($char, "Is String");
         $this->assertTrue(ctype_alpha($char), "Check for alphabetic character");
         $this->assertTrue(ctype_lower($char), "Check for lowercase character");
@@ -53,7 +53,7 @@ class CharTest extends TestCase
     /** @test */
     public function test_generate_char_alphaUpperCase()
     {
-        $char = Keygen::char()->alphaUpperCase()->generate();
+        $char = Keygen::alphabet()->alphaUpperCase()->generate();
         $this->assertIsString($char, "Is String");
         $this->assertTrue(ctype_alpha($char), "Check for alphabetic character");
         $this->assertTrue(ctype_upper($char), "Check for uppercase character");
@@ -62,7 +62,7 @@ class CharTest extends TestCase
     /** @test */
     public function test_generate_char_lower()
     {
-        $char = Keygen::char()->lower()->generate();
+        $char = Keygen::alphabet()->lower()->generate();
         $this->assertIsString($char, "Is String");
         $this->assertTrue(ctype_alpha($char), "Check for alphabetic character");
         $this->assertTrue(ctype_lower($char), "Check for lowercase character");
@@ -71,7 +71,7 @@ class CharTest extends TestCase
     /** @test */
     public function test_generate_char_upper()
     {
-        $char = Keygen::char()->upper()->generate();
+        $char = Keygen::alphabet()->upper()->generate();
         $this->assertIsString($char, "Is String");
         $this->assertTrue(ctype_alpha($char), "Check for alphabetic character");
         $this->assertTrue(ctype_upper($char), "Check for uppercase character");
@@ -80,7 +80,7 @@ class CharTest extends TestCase
     /** @test */
     public function test_generate_char_numeric()
     {
-        $char = Keygen::char()->numeric()->generate();
+        $char = Keygen::alphabet()->numeric()->generate();
         $this->assertIsString($char, "Is String");
         $this->assertTrue(ctype_alnum($char), "Check for alphanumeric character");
     }
@@ -88,14 +88,14 @@ class CharTest extends TestCase
     /** @test */
     public function test_generate_char_alphaNumeric()
     {
-        $char = Keygen::char()->alphaNumeric()->generate();
+        $char = Keygen::alphabet()->alphaNumeric()->generate();
         $this->assertIsString($char, "Is String");
     }
 
     /** @test */
     public function test_generate_char_prefix_and_suffix()
     {
-        $char = Keygen::char()->prefix('ihu')->suffix('pi')->generate();
+        $char = Keygen::alphabet()->prefix('ihu')->suffix('pi')->generate();
         $this->assertIsString($char, "Is String");
         $this->assertTrue(ctype_alpha($char), "Check for alphabetic character");
     }
@@ -103,7 +103,7 @@ class CharTest extends TestCase
     /** @test */
     public function test_generate_char_specialChars()
     {
-        $char = Keygen::char()->specialCharacters()->generate();
+        $char = Keygen::alphabet()->specialCharacters()->generate();
         $this->assertIsString($char, "Is String");
     }
 }
